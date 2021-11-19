@@ -2134,3 +2134,383 @@ Processing by Api::V1::AuctionsController#index as JSON
 Completed 200 OK in 23ms (Views: 10.4ms | ActiveRecord: 6.6ms | Allocations: 8935)
 
 
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:42:04 -0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (2.5ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.55ms)
+Completed 200 OK in 44ms (Views: 17.2ms | ActiveRecord: 9.2ms | Allocations: 12936)
+
+
+Started GET "/api/v1/bids" for 127.0.0.1 at 2021-11-19 12:42:08 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/bids"):
+  
+Started GET "/api/v1/bids" for 127.0.0.1 at 2021-11-19 12:47:21 -0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/bids"):
+  
+Started GET "/api/v1/bids" for 127.0.0.1 at 2021-11-19 12:47:24 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/bids"):
+  
+Started GET "/api/v1/bids" for 127.0.0.1 at 2021-11-19 12:47:31 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/bids"):
+  
+Started GET "/api/v1/bids" for 127.0.0.1 at 2021-11-19 12:47:53 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/bids"):
+  
+Started GET "/api/v1/auctions/bids" for 127.0.0.1 at 2021-11-19 12:48:26 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions/bids" for 127.0.0.1 at 2021-11-19 12:48:57 -0800
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions/bids" for 127.0.0.1 at 2021-11-19 12:48:58 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/bids" for 127.0.0.1 at 2021-11-19 12:49:05 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/bids"):
+  
+Started GET "/api/v1/bids" for 127.0.0.1 at 2021-11-19 12:49:07 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/bids"):
+  
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:49:18 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:49:32 -0800
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:50:25 -0800
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:50:26 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:51:20 -0800
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:51:41 -0800
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:51:42 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:52:46 -0800
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:52:47 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:52:48 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:54:02 -0800
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:54:03 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:54:04 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:54:05 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/bids" for 127.0.0.1 at 2021-11-19 12:54:07 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/bids"):
+  
+Started GET "/api/v1" for 127.0.0.1 at 2021-11-19 12:54:11 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1"):
+  
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:54:16 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:54:39 -0800
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:54:45 -0800
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:54:49 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:55:00 -0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auction" for 127.0.0.1 at 2021-11-19 12:55:03 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auction"):
+  
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:55:15 -0800
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:56:40 -0800
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:58:32 -0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auctions"):
+  
+Started GET "/api/v1/auction" for 127.0.0.1 at 2021-11-19 12:58:37 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::AuctionController
+Did you mean?  Api::V1::AuctionsController
+               ActionController
+               Api::ApplicationController
+               ApplicationController):
+  
+Started GET "/api/v1/auction/2" for 127.0.0.1 at 2021-11-19 12:59:00 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::AuctionController
+Did you mean?  Api::V1::AuctionsController
+               ActionController
+               Api::ApplicationController
+               ApplicationController):
+  
+Started GET "/api/v1/auction/20" for 127.0.0.1 at 2021-11-19 12:59:04 -0800
+  
+ActionController::RoutingError (uninitialized constant Api::V1::AuctionController
+Did you mean?  Api::V1::AuctionsController
+               ActionController
+               Api::ApplicationController
+               ApplicationController):
+  
+Started GET "/api/v1/auction/20" for 127.0.0.1 at 2021-11-19 13:00:18 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auction/20"):
+  
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 13:00:22 -0800
+  
+Zeitwerk::NameError (expected file /Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/api/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/auctions_controller.rb:1:in `<main>'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 13:01:30 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (2.0ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.29ms)
+Completed 200 OK in 68ms (Views: 22.8ms | ActiveRecord: 17.3ms | Allocations: 13236)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 13:01:43 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  [1m[36mAuction Load (0.8ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.68ms)
+Completed 200 OK in 35ms (Views: 17.5ms | ActiveRecord: 10.8ms | Allocations: 12549)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 13:01:51 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (0.8ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.97ms)
+Completed 200 OK in 20ms (Views: 10.2ms | ActiveRecord: 5.7ms | Allocations: 8956)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 13:02:29 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  [1m[36mAuction Load (1.0ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.14ms)
+Completed 200 OK in 32ms (Views: 15.5ms | ActiveRecord: 8.8ms | Allocations: 11817)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 13:03:08 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  [1m[36mAuction Load (1.1ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.64ms)
+Completed 200 OK in 29ms (Views: 12.7ms | ActiveRecord: 12.1ms | Allocations: 11809)
+
+
+Started GET "/api/v1/auctions/10" for 127.0.0.1 at 2021-11-19 13:03:16 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mAuction Load (1.0ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:11:in `show'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers]   [1m[36mBid Load (5.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers] Rendered AuctionSerializer with ActiveModelSerializers::Adapter::Attributes (58.12ms)
+Completed 200 OK in 82ms (Views: 59.3ms | ActiveRecord: 18.3ms | Allocations: 20938)
+
+
+Started GET "/api/v1/auctions/10/bids" for 127.0.0.1 at 2021-11-19 13:03:20 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auctions/10/bids"):
+  
+Started GET "/api/v1/auctions/10/bids" for 127.0.0.1 at 2021-11-19 13:05:01 -0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auctions/10/bids"):
+  
+Started GET "/api/v1/auctions/bids" for 127.0.0.1 at 2021-11-19 13:05:19 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"bids"}
+  [1m[36mAuction Load (1.6ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:11:in `show'
+Completed 404 Not Found in 43ms (ActiveRecord: 9.0ms | Allocations: 6382)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=bids):
+  
+app/controllers/api/v1/auctions_controller.rb:11:in `show'
+Started GET "/api/v1/bids" for 127.0.0.1 at 2021-11-19 13:05:28 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/bids"):
+  
+Started GET "/api/v1/bids" for 127.0.0.1 at 2021-11-19 13:08:48 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/bids"):
+  
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 13:08:52 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  [1m[36mAuction Load (2.7ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.55ms)
+Completed 200 OK in 66ms (Views: 29.1ms | ActiveRecord: 18.2ms | Allocations: 13834)
+
+
+Started GET "/api/v1/auctions/20" for 127.0.0.1 at 2021-11-19 13:08:56 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mAuction Load (1.3ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:11:in `show'
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers]   [1m[36mBid Load (2.7ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers] Rendered AuctionSerializer with ActiveModelSerializers::Adapter::Attributes (60.5ms)
+Completed 200 OK in 91ms (Views: 65.4ms | ActiveRecord: 15.3ms | Allocations: 20509)
+
+
+Started GET "/api/v1/auctions/20/bids" for 127.0.0.1 at 2021-11-19 13:08:59 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auctions/20/bids"):
+  
+Started GET "/api/v1/auctions/20/bids" for 127.0.0.1 at 2021-11-19 13:31:08 -0800
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auctions/20/bids"):
+  
+Started GET "/api/v1/auctions/20/bids" for 127.0.0.1 at 2021-11-19 13:31:10 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auctions/20/bids"):
+  
+Started GET "/api/v1/auctions/20/bids" for 127.0.0.1 at 2021-11-19 13:32:31 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auctions/20/bids"):
+  
+Started GET "/api/v1/auctions/" for 127.0.0.1 at 2021-11-19 13:34:09 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3:in `current_user'
+  [1m[36mAuction Load (4.7ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.81ms)
+Completed 200 OK in 73ms (Views: 26.9ms | ActiveRecord: 20.7ms | Allocations: 16861)
+
+
+Started GET "/api/v1/auctions/20/bids" for 127.0.0.1 at 2021-11-19 13:37:30 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/auctions/20/bids"):
+  
