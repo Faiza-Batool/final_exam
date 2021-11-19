@@ -877,3 +877,1260 @@ FOREIGN KEY ("user_id")
   [1m[35m (4.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "auctions"[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bids"[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2021-11-19 12:07:56 -0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aitzazhassan/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aitzazhassan/.rvm/gems/ruby-3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.8ms | Allocations: 415)
+Completed 200 OK in 19ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 2901)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:08:05 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (1.7ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.17ms)
+Completed 200 OK in 62ms (Views: 30.0ms | ActiveRecord: 14.4ms | Allocations: 13300)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:08:36 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (1.3ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.09ms)
+Completed 200 OK in 25ms (Views: 13.2ms | ActiveRecord: 6.8ms | Allocations: 10765)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:13:42 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (0.9ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 6.3ms | Allocations: 8219)
+
+
+  
+SyntaxError (/Users/aitzazhassan/final_exam/biddr_api/biddr_api/app/serializers/auction_serializer.rb:24: syntax error, unexpected `end', expecting end-of-input):
+  
+app/serializers/auction_serializer.rb:24: syntax error, unexpected `end', expecting end-of-input
+app/serializers/auction_serializer.rb:24: syntax error, unexpected `end', expecting end-of-input
+app/serializers/auction_serializer.rb:24: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/v1/auctions_controller.rb:7:in `index'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:14:38 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (1.2ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (0.9ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.0ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.0ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.0ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.5ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (0.8ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.0ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (2.7ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.0ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.5ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (0.9ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (0.8ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (184.61ms)
+Completed 500 Internal Server Error in 224ms (ActiveRecord: 49.3ms | Allocations: 74159)
+
+
+  
+NoMethodError (undefined method `full_name' for #<User id: 9, first_name: "Joan", last_name: "Zemlak", email: "Joan@Zemlak.com", password_digest: [FILTERED], created_at: "2021-11-19 19:44:00.028252000 +0000", updated_at: "2021-11-19 19:44:00.028252000 +0000">):
+  
+app/controllers/api/v1/auctions_controller.rb:7:in `index'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:14:41 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (2.4ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (2.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.6ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (2.6ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (2.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.5ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (2.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.5ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.5ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (0.9ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (164.61ms)
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 40.9ms | Allocations: 48878)
+
+
+  
+NoMethodError (undefined method `full_name' for #<User id: 9, first_name: "Joan", last_name: "Zemlak", email: "Joan@Zemlak.com", password_digest: [FILTERED], created_at: "2021-11-19 19:44:00.028252000 +0000", updated_at: "2021-11-19 19:44:00.028252000 +0000">):
+  
+app/controllers/api/v1/auctions_controller.rb:7:in `index'
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:15:26 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (0.9ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (0.8ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 10]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 14]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (0.8ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 12]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (0.9ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 15]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.0ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 9]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (0.9ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 18]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.0ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (0.9ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 13]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (0.8ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 16]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (2.5ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 21]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.5ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.0ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 19]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mBid Load (1.0ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 11]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (165.56ms)
+Completed 200 OK in 188ms (Views: 137.7ms | ActiveRecord: 44.8ms | Allocations: 79968)
+
+
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:15:40 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 2794)
+
+
+  
+NoMethodError (undefined method `find_auction' for #<Api::V1::AuctionsController:0x0000000000d1b0>
+Did you mean?  send_action):
+  
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:15:57 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2803)
+
+
+  
+NoMethodError (undefined method `find_auction' for #<Api::V1::AuctionsController:0x0000000000e600>
+Did you mean?  send_action):
+  
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:15:58 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2784)
+
+
+  
+NoMethodError (undefined method `find_auction' for #<Api::V1::AuctionsController:0x0000000000e920>
+Did you mean?  send_action):
+  
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:17:13 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3730)
+
+
+  
+NoMethodError (undefined method `find_auction' for #<Api::V1::AuctionsController:0x00000000007760>
+Did you mean?  send_action):
+  
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:17:16 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 2786)
+
+
+  
+NoMethodError (undefined method `find_auction' for #<Api::V1::AuctionsController:0x00000000007c88>
+Did you mean?  send_action):
+  
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:18:11 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2803)
+
+
+  
+NoMethodError (undefined method `find_auction' for #<Api::V1::AuctionsController:0x00000000009150>
+Did you mean?  send_action):
+  
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:18:12 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2783)
+
+
+  
+NoMethodError (undefined method `find_auction' for #<Api::V1::AuctionsController:0x00000000009470>
+Did you mean?  send_action):
+  
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:18:13 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2783)
+
+
+  
+NoMethodError (undefined method `find_auction' for #<Api::V1::AuctionsController:0x00000000009790>
+Did you mean?  send_action):
+  
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:18:14 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2783)
+
+
+  
+NoMethodError (undefined method `find_auction' for #<Api::V1::AuctionsController:0x00000000009ab0>
+Did you mean?  send_action):
+  
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:19:39 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mAuction Load (1.1ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:35:in `find_auction'
+Completed 404 Not Found in 25ms (ActiveRecord: 9.2ms | Allocations: 5692)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=1):
+  
+app/controllers/api/v1/auctions_controller.rb:35:in `find_auction'
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:23:24 -0800
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mAuction Load (1.5ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:11:in `show'
+Completed 404 Not Found in 29ms (ActiveRecord: 9.4ms | Allocations: 6269)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=1):
+  
+app/controllers/api/v1/auctions_controller.rb:11:in `show'
+  [1m[36mAuction Load (0.4ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/v1/auctions/1" for 127.0.0.1 at 2021-11-19 12:24:02 -0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mAuction Load (1.6ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:11:in `show'
+Completed 404 Not Found in 21ms (ActiveRecord: 9.9ms | Allocations: 6275)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Auction with 'id'=1):
+  
+app/controllers/api/v1/auctions_controller.rb:11:in `show'
+Started GET "/api/v1/auctions/2" for 127.0.0.1 at 2021-11-19 12:24:05 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mAuction Load (1.7ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers]   [1m[36mBid Load (1.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers] Rendered AuctionSerializer with ActiveModelSerializers::Adapter::Attributes (70.63ms)
+Completed 200 OK in 119ms (Views: 82.6ms | ActiveRecord: 18.6ms | Allocations: 27561)
+
+
+Started GET "/api/v1/auctions/2" for 127.0.0.1 at 2021-11-19 12:24:27 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mAuction Load (1.5ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers]   [1m[36mBid Load (5.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers] Rendered AuctionSerializer with ActiveModelSerializers::Adapter::Attributes (18.29ms)
+Completed 200 OK in 24ms (Views: 11.1ms | ActiveRecord: 9.7ms | Allocations: 4172)
+
+
+Started GET "/api/v1/auctions/2" for 127.0.0.1 at 2021-11-19 12:27:19 -0800
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mAuction Load (1.0ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers]   [1m[36mBid Load (2.0ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers] Rendered AuctionSerializer with ActiveModelSerializers::Adapter::Attributes (51.05ms)
+Completed 200 OK in 101ms (Views: 51.9ms | ActiveRecord: 22.9ms | Allocations: 32621)
+
+
+Started GET "/api/v1/auctions/2" for 127.0.0.1 at 2021-11-19 12:27:20 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mAuction Load (1.9ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers]   [1m[36mBid Load (2.6ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers] Rendered AuctionSerializer with ActiveModelSerializers::Adapter::Attributes (17.2ms)
+Completed 200 OK in 26ms (Views: 13.2ms | ActiveRecord: 6.9ms | Allocations: 4174)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:27:25 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (2.9ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.92ms)
+Completed 200 OK in 20ms (Views: 10.7ms | ActiveRecord: 2.9ms | Allocations: 3150)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:27:57 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (1.0ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.2ms)
+Completed 200 OK in 21ms (Views: 10.0ms | ActiveRecord: 6.6ms | Allocations: 9464)
+
+
+Started GET "/api/v1/auctions/20" for 127.0.0.1 at 2021-11-19 12:28:05 -0800
+Processing by Api::V1::AuctionsController#show as JSON
+  Parameters: {"id"=>"20"}
+  [1m[36mAuction Load (3.2ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" WHERE "auctions"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auctions_controller.rb:11:in `show'
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers]   [1m[36mBid Load (1.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."auction_id" = $1[0m  [["auction_id", 20]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auctions_controller.rb:14:in `show'
+[active_model_serializers] Rendered AuctionSerializer with ActiveModelSerializers::Adapter::Attributes (60.58ms)
+Completed 200 OK in 73ms (Views: 51.3ms | ActiveRecord: 16.2ms | Allocations: 19036)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:28:12 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (1.6ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.19ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 1.6ms | Allocations: 3835)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:28:24 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (1.1ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.49ms)
+Completed 200 OK in 22ms (Views: 10.2ms | ActiveRecord: 6.2ms | Allocations: 8939)
+
+
+Started GET "/api/v1/auctions" for 127.0.0.1 at 2021-11-19 12:28:31 -0800
+Processing by Api::V1::AuctionsController#index as JSON
+  [1m[36mAuction Load (1.0ms)[0m  [1m[34mSELECT "auctions".* FROM "auctions" ORDER BY "auctions"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/auctions_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.7ms)
+Completed 200 OK in 23ms (Views: 10.4ms | ActiveRecord: 6.6ms | Allocations: 8935)
+
+
