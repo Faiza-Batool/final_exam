@@ -24,7 +24,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -100,6 +101,8 @@ bower.json
 
 # Ignore node_modules
 node_modules/
+biddr-client/node_modules
+biddr_api/node_modules
 
 # Ignore precompiled javascript packs
 /public/packs
