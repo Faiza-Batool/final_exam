@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_11_19_190017) do
     t.string "title"
     t.text "body"
     t.integer "current_price"
+    t.integer "reserve_price"
     t.date "end_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -31,7 +31,7 @@ users = User.all
     a = Auction.create(
        title: Faker::Device.model_name,
        body: Faker::Hacker.say_something_smart,
-       current_price: rand(100_000),
+       current_price: rand(100_00),
        end_date: Faker::Date.forward(days: 23),
        created_at: created_at,
        updated_at: created_at,
@@ -39,7 +39,7 @@ users = User.all
     )
     if a.valid? 
         rand(1..5).times do
-            Bid.create(price:rand(100_000), auction:a, user: users.sample)
+            Bid.create(price:rand(100_00), auction:a, user: users.sample)
         end
 
     end
@@ -48,8 +48,8 @@ end
 auctions = Auction.all
 bids = Bid.all
 
-puts Cowsay.say("Generated #{auctions.count} questions", :frogs)
-puts Cowsay.say("Generated #{bids.count} answers", :cow)
+puts Cowsay.say("Generated #{auctions.count} Auctions", :frogs)
+puts Cowsay.say("Generated #{bids.count} Bids", :cow)
 puts Cowsay.say("Generated #{users.count} users", :koala)
 
 
